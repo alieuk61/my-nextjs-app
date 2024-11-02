@@ -1,15 +1,21 @@
-import Image from "next/image"
+import Image from "next/image";
+import { AddTaskButton } from "./common/buttons";
 
-export default function BoardHeader () {
+export default function BoardHeader() {
+  return (
+    <div className='w-full h-24 px-8 bg-white dark:bg-darkGrey border-b-2 border-linesLight dark:border-linesDark flex justify-between items-center'>
+      <h2>{/*board name*/}</h2>
+      {/* add new task button */}
 
-    return(
-        <div className="w-full h-24 bg-white">
-            <h2>{/*board name*/}</h2>
-            {/* add new task button */}
-            <Image
-                src='..src/public/assets/icon-vertical-elipses.svg'
-                alt="vertical elipses"
-            />
-        </div>
-    )
+      <div className="flex">
+        <AddTaskButton />
+        <Image
+          src='/assets/icon-vertical-ellipsis.svg'
+          alt='vertical ellipsis'
+          width={10}
+          height={10}
+        />
+      </div>
+    </div>
+  );
 }

@@ -5,6 +5,8 @@ const MyContext = createContext();
 
 export const MyProvider = ({ children }) => {
 
+  const [boardsdata, setBoardsData] = useState();
+
   return (
     <MyContext.Provider value={{ 
         
